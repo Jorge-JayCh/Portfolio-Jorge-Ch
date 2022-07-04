@@ -2,20 +2,22 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 :root {
-  --primary-color: steelblue;
-  --primary-color-dark: #040303;
-  --accent-color: lightgrey;
+  --primary-color: #041C32;
+  --primary-color-dark: black;
+  --font: rgba(211, 211, 211, 0.85);
+  --accent-color: steelblue;
+  --opacity-black-color: rgba(0, 0, 0, 0.4); 
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  margin: 0;
+body {  
   padding: 0;
   font-family: 'Roboto Slab', serif;
 }
@@ -23,6 +25,7 @@ body {
 .header {
   position: fixed;
   width: 100%;
+  /* background-image: linear-gradient(black,#16213E) ; */
   background-color: var(--primary-color-dark);
   z-index: 1;
   display:flex;
@@ -32,7 +35,6 @@ body {
 .logo {
   width: 15%;
   min-width: 102px;
-  background-color: steelblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,11 +42,20 @@ body {
 }
 
 .logo a {
-  margin: 0 auto;
+  padding: 10px;
+  margin: 0;
+  height: 100%;
   text-decoration: none;
-  color: var(--accent-color);
+  color: var(--font);
   font-size: 30px;
   font-weight: bold;
+}
+
+.logo a:hover {
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.24),#1f4068c2);
+  background-size: cover;
+  background-position: center;
 }
 
 .navbar {
@@ -57,33 +68,40 @@ body {
 
 .menu {
   list-style: none;
-  margin: 0 auto;
+  height: 100%;
   padding: 0;
+  margin: 0 auto;
   overflow: hidden;
-  color: var(--accent-color);
-  text-align: center;
+  /* color: var(--font); */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .menu-item {
-  display: inline-block;
-  padding: 20px 0;
+  display: block;
+  height: 100%;
   transition: 1s;
+  display: flex;
+  align-items: center;
 }
 
 .menu-item a:hover {
-  background-color: var(--accent-color);
-  color: var(--primary-color-dark);
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgb(0, 0, 0),#1f4068c2);
+  background-size: cover;
+  background-position: center;
 }
 
 .menu-item a {
   padding: 20px;
   text-decoration: none;
-  width: 100%;
-  color: var(--accent-color);
-  font-size: 18px;
+  /* width: 100%; */
+  height: 100%;
+  margin: 0;
+  color: var(--font);
+  font-size: 20px;
   letter-spacing: 2px;
   transition: all 1s;
 }
@@ -92,6 +110,56 @@ body {
   padding-right: 10px;
 }
 
+.image-background {
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/developer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.image-opacity {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--opacity-black-color);
+}
+
+
+.image-title{
+  margin: 100px 0 50px 0;
+  font-weight: 600;
+  font-size: 60px;
+  color: var(--font);
+}
+
+.btn-contact {
+  text-decoration: none;
+  color: var(--font);
+  background-color: var(--primary-color);
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  padding: 1rem;
+  width: 200px;
+  border-radius: .5rem;
+  margin-bottom: 30px;
+}
+
+.image-content ul {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-contact:hover{
+  background-image: linear-gradient(rgb(0, 0, 0),#1f4068c2);
+  background-size: cover;
+  background-position: center;
+}
 
 
 .introduction {
@@ -107,6 +175,7 @@ body {
 
 .half-section {
   width: 50%;
+  overflow: hidden;
 }
 
 .avatar-container {
@@ -127,13 +196,12 @@ body {
   margin: 0;
 }
 
-h1 {
-  margin: 100px 0 0 0;
-  font-size: 60px;
+/* h1 {
+  margin: 100px 0 50px 0;
   font-weight: 800;
-  color: var(--accent-color);
-  text-transform: uppercase;
-}
+  font-size: 60px;
+  color: var(--font);
+} */
 
 .socials {
   list-style: none;
@@ -146,7 +214,7 @@ h1 {
   font-size: 30px;
   text-decoration: none;
   margin-right: 15px;
-  color: var(--accent-color);
+  color: var(--font);
 }
 
 .text-section {
@@ -232,7 +300,7 @@ footer {
   flex-direction: column;
   justify-content: flex-end;
   background-color: var(--primary-color-dark);
-  color: var(--accent-color);
+  color: var(--font);
   padding: 20px;
 }
 
@@ -243,7 +311,7 @@ footer {
 
 .footer-link {
   text-decoration: none;
-  color: var(--accent-color);
+  color: var(--font);
   font-size: 18px;
 }
 
