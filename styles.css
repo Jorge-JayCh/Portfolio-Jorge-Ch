@@ -1,10 +1,13 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat:ital,wght@1,300&family=Roboto+Slab:wght@200;400&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
-  --primary-color: #243A73;
-  --primary-color-dark: #06113C;
-  --accent-color: #A5BECC;
+  --primary-color: steelblue;
+  --primary-color-dark: #040303;
+  --accent-color: lightgrey;
 }
 
 html {
@@ -14,29 +17,59 @@ html {
 body {
   margin: 0;
   padding: 0;
-  /* font-family: 'Manrope', sans-serif; */
   font-family: 'Roboto Slab', serif;
 }
 
-.navbar {
+.header {
   position: fixed;
   width: 100%;
   background-color: var(--primary-color-dark);
   z-index: 1;
+  display:flex;
+  flex-flow: row nowrap;
+}
+
+.logo {
+  width: 15%;
+  min-width: 102px;
+  background-color: steelblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.logo a {
+  margin: 0 auto;
+  text-decoration: none;
+  color: var(--accent-color);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar {
+  width: 85%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  flex: 5 1 auto;
 }
 
 .menu {
   list-style: none;
-  margin: auto;
+  margin: 0 auto;
   padding: 0;
   overflow: hidden;
   color: var(--accent-color);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-item {
   display: inline-block;
-  padding: 20px;
+  padding: 20px 0;
   transition: 1s;
 }
 
@@ -48,21 +81,18 @@ body {
 .menu-item a {
   padding: 20px;
   text-decoration: none;
+  width: 100%;
   color: var(--accent-color);
   font-size: 18px;
   letter-spacing: 2px;
   transition: all 1s;
 }
 
-.logo {
-  text-decoration: none;
-  position: fixed;
-  float: left;
-  margin: 16px 36px;
-  color: var(--accent-color);
-  font-size: 24px;
-  font-weight: bold;
+.menu-item i {
+  padding-right: 10px;
 }
+
+
 
 .introduction {
   padding-left: 50px;
