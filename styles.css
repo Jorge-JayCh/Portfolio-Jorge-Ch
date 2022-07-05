@@ -116,7 +116,9 @@ body {
 
 .half-section {
   width: 50%;
+  height: 100%;
   overflow: hidden;
+
 }
 
 /************* Seccion Inicio *************/
@@ -186,6 +188,8 @@ body {
 }
 
 .text-section {
+  /*Prueba Tamaño flexible respecto al vh*/
+  /* height: 100vh;  */
   background: linear-gradient(var(--primary-color-dark),var(--primary-color),#1f4068);
   display: flex;
   flex-direction: column;
@@ -226,17 +230,20 @@ body {
 
 .image-perfil {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 }
 
 .text-section p {
-  padding: 20px;
+  padding: 0px 80px;
   display: flex;
+  text-align: justify;
   justify-content: center;
+  overflow: hidden;
 }
 
 .btn-content {
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,14 +266,20 @@ body {
 }
 
 .project-list li {
-  overflow: hidden;
+  /*Prueba Tamaño flexible respecto al vh*/
+  height: 28vh; 
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+.project-list p {
+  padding: 10px 80px;
+  overflow: hidden;
 }
 
 .project-link {
+  padding: 20px;
   text-decoration: none;
   color: var(--accent-color);
   font-style: italic;
